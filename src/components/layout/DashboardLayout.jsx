@@ -45,11 +45,11 @@ const DashboardLayout = () => {
       <div className={styles.main}>
         <Topbar 
           onExport={handleExportPDF} 
-          onPreviewToggle={() => setIsPreviewMode(!isPreviewMode)}
+          onPreviewToggle={() => setIsPreviewMode(prev => !prev)}
           isPreviewMode={isPreviewMode}
         />
         <div className={styles.content}>
-          <div className={clsx(styles.formContainer, isPreviewMode && styles.hiddenMobile)}>
+          <div className={clsx(styles.formContainer, isPreviewMode && styles.hidden)}>
             <FormPanel activeTab={activeTab} />
           </div>
           <div className={clsx(styles.previewContainer, !isPreviewMode && styles.hiddenMobile)}>

@@ -19,6 +19,11 @@
   --danger: #ef4444;
   --success: #10b981;
 
+  --input-bg: rgba(0, 0, 0, 0.2);
+  --action-bg: rgba(255, 255, 255, 0.05);
+  --action-bg-hover: rgba(255, 255, 255, 0.1);
+  --action-active-bg: rgba(139, 92, 246, 0.15);
+
   /* Typography */
   --font-ui: 'Inter', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
@@ -39,6 +44,31 @@
   --radius-xl: 24px;
 
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light {
+  --bg-color: #f3f4f6;
+  --bg-panel: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-glass-hover: rgba(255, 255, 255, 0.95);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-light: rgba(0, 0, 0, 0.15);
+  
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  
+  --accent-purple: #7c3aed;
+  --accent-indigo: #4f46e5;
+  --accent-gradient: linear-gradient(135deg, var(--accent-purple), var(--accent-indigo));
+  --accent-gradient-hover: linear-gradient(135deg, #6d28d9, #4338ca);
+
+  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.2);
+
+  --input-bg: rgba(255, 255, 255, 0.8);
+  --action-bg: rgba(0, 0, 0, 0.05);
+  --action-bg-hover: rgba(0, 0, 0, 0.1);
+  --action-active-bg: rgba(139, 92, 246, 0.1);
 }
 
 * {
@@ -103,7 +133,7 @@ input, textarea, select {
 /* Base Form Input */
 .form-input {
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--input-bg);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   color: var(--text-primary);
