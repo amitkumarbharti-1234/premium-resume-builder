@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.previewWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.a4Page {
+  width: 210mm;
+  height: 297mm;
+  background-color: white;
+  box-shadow: var(--shadow-lg);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease;
+  color: #1f2937; /* Default dark text for light A4 bg */
+}
+
+/* Print specific styles */
+@media print {
+  .a4Page {
+    width: 210mm;
+    height: 297mm;
+    box-shadow: none;
+    border-radius: 0;
+    transform: none !important;
+  }
+}
